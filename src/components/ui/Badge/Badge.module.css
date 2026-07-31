@@ -1,0 +1,32 @@
+.badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 4px 12px;
+  border-radius: 9999px;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  white-space: nowrap;
+}
+
+.gold {
+  background-color: rgba(197, 164, 126, 0.15);
+  color: var(--color-gold-hover);
+  border: 1px solid rgba(197, 164, 126, 0.3);
+}
+
+.sage {
+  background-color: rgba(91, 123, 94, 0.15);
+  color: var(--color-sage);
+  border: 1px solid rgba(91, 123, 94, 0.3);
+}
+
+.sand {
+  background-color: var(--color-sand);
+  color: var(--color-charcoal);
+}
+
+.dark {
+  background-color: var(--color-charcoal);
+  color: var(--color-cream);
+}

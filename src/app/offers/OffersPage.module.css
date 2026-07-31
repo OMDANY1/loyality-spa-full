@@ -1,0 +1,34 @@
+.page {
+  padding-top: 100px;
+  background-color: var(--color-cream);
+  min-height: 100vh;
+}
+
+.header {
+  background-color: var(--color-charcoal);
+  padding: var(--space-16) 0;
+  text-align: center;
+}
+
+.container {
+  padding-top: var(--space-12);
+  padding-bottom: var(--space-20);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-8);
+}
+
+@media (min-width: 768px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}

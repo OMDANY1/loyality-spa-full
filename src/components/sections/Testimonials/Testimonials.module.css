@@ -1,0 +1,71 @@
+.section {
+  padding: var(--space-20) 0;
+  background-color: #FFFFFF;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-8);
+}
+
+@media (min-width: 768px) {
+  .grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.card {
+  background-color: var(--color-cream);
+  border-radius: var(--radius-card);
+  padding: var(--space-8);
+  border: 1px solid var(--color-sand);
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  transition: all var(--transition-normal);
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-lg);
+}
+
+.quoteIcon {
+  color: var(--color-gold);
+  opacity: 0.3;
+  margin-bottom: var(--space-4);
+}
+
+.stars {
+  display: flex;
+  gap: 4px;
+  margin-bottom: var(--space-4);
+}
+
+.quote {
+  font-family: var(--font-accent), serif;
+  font-style: italic;
+  font-size: 17px;
+  color: var(--color-charcoal);
+  line-height: 1.6;
+  margin-bottom: var(--space-6);
+  flex-grow: 1;
+}
+
+.authorInfo {
+  margin-top: auto;
+  border-top: 1px solid var(--color-sand);
+  padding-top: var(--space-4);
+}
+
+.authorName {
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--color-charcoal);
+}
+
+.authorRole {
+  font-size: 13px;
+  color: var(--color-gray);
+}

@@ -1,0 +1,33 @@
+.container {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: var(--space-6);
+  padding-right: var(--space-6);
+}
+
+@media (min-width: 768px) {
+  .container {
+    padding-left: var(--space-12);
+    padding-right: var(--space-12);
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    padding-left: var(--space-20);
+    padding-right: var(--space-20);
+  }
+}
+
+.normal {
+  max-width: var(--max-width);
+}
+
+.narrow {
+  max-width: 1000px;
+}
+
+.wide {
+  max-width: 1600px;
+}

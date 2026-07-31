@@ -1,0 +1,137 @@
+.section {
+  position: relative;
+  padding: var(--space-20) 0;
+  color: var(--color-cream);
+  overflow: hidden;
+}
+
+.bgWrapper {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+}
+
+.bgImage {
+  object-fit: cover;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(44, 44, 44, 0.85) 0%,
+    rgba(44, 44, 44, 0.7) 50%,
+    rgba(44, 44, 44, 0.9) 100%
+  );
+}
+
+.container {
+  position: relative;
+  z-index: 2;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: var(--space-12);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.tag {
+  font-size: 13px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--color-gold);
+  font-weight: 500;
+  margin-bottom: var(--space-3);
+}
+
+.title {
+  font-size: clamp(2rem, 3.5vw, 3rem);
+  font-weight: 300;
+  color: #FFFFFF;
+  line-height: 1.2;
+  margin-bottom: var(--space-4);
+}
+
+.subtitle {
+  font-size: 16px;
+  color: var(--color-sand);
+  max-width: 600px;
+  line-height: 1.6;
+}
+
+.tiersGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-6);
+  margin-bottom: var(--space-12);
+}
+
+@media (min-width: 768px) {
+  .tiersGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .tiersGrid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.tierCard {
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(10px);
+  border-radius: var(--radius-card);
+  padding: var(--space-6);
+  border: 1px solid rgba(197, 164, 126, 0.3);
+  transition: all var(--transition-normal);
+}
+
+.tierCard:hover {
+  transform: translateY(-6px);
+  background: rgba(255, 255, 255, 0.14);
+  border-color: var(--color-gold);
+}
+
+.tierHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: var(--space-4);
+}
+
+.tierBadge {
+  font-size: 11px;
+  color: var(--color-sand);
+  background: rgba(0, 0, 0, 0.3);
+  padding: 3px 8px;
+  border-radius: 9999px;
+}
+
+.tierName {
+  font-size: 20px;
+  color: #FFFFFF;
+  margin-bottom: 4px;
+}
+
+.pointsRange {
+  font-size: 13px;
+  color: var(--color-gold);
+  display: block;
+  margin-bottom: var(--space-4);
+}
+
+.tierDiscount {
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--color-sand);
+}
+
+.ctaWrapper {
+  display: flex;
+  justify-content: center;
+}

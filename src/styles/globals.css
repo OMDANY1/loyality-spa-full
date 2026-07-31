@@ -1,0 +1,130 @@
+@import './tokens.css';
+@import './animations.css';
+
+/* Global Reset & Base Styles */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  background-color: var(--color-cream);
+  color: var(--color-charcoal);
+  font-family: var(--font-body), system-ui, -apple-system, sans-serif;
+  line-height: 1.6;
+  overflow-x: hidden;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* RTL Specific typography adjustments */
+[dir="rtl"] body {
+  font-family: var(--font-ar-body), var(--font-body), system-ui, sans-serif;
+}
+
+/* Typography Hierarchy per UI_SYSTEM.md */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading), Georgia, serif;
+  font-weight: 400;
+  letter-spacing: -0.02em;
+  color: var(--color-charcoal);
+}
+
+[dir="rtl"] h1, 
+[dir="rtl"] h2, 
+[dir="rtl"] h3, 
+[dir="rtl"] h4, 
+[dir="rtl"] h5, 
+[dir="rtl"] h6 {
+  font-family: var(--font-ar-heading), var(--font-heading), serif;
+  letter-spacing: 0;
+}
+
+.display-title {
+  font-size: clamp(3rem, 6vw, 5rem);
+  line-height: 1.1;
+  font-weight: 300;
+}
+
+.h1-title {
+  font-size: clamp(2.5rem, 4vw, 3.5rem);
+  line-height: 1.15;
+}
+
+.h2-title {
+  font-size: clamp(2rem, 3vw, 2.75rem);
+  line-height: 1.2;
+}
+
+.h3-title {
+  font-size: clamp(1.5rem, 2vw, 2rem);
+  line-height: 1.3;
+}
+
+.accent-quote {
+  font-family: var(--font-accent), serif;
+  font-style: italic;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Skip Link for Accessibility */
+.skip-link {
+  position: absolute;
+  top: -100px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--color-gold);
+  color: var(--color-cream);
+  padding: 12px 24px;
+  border-radius: 8px;
+  z-index: 10000;
+  transition: top 0.2s;
+  font-weight: 500;
+}
+
+.skip-link:focus {
+  top: 16px;
+}
+
+/* Scrollbar Styling */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-cream);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-sand);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-gold);
+}

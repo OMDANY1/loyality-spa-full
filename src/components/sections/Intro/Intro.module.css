@@ -1,0 +1,43 @@
+.section {
+  padding: var(--space-20) 0;
+  background-color: var(--color-cream);
+  text-align: center;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.tag {
+  font-size: 13px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--color-gold);
+  font-weight: 500;
+  margin-bottom: var(--space-4);
+}
+
+.headline {
+  font-size: clamp(2rem, 3.5vw, 3rem);
+  font-weight: 300;
+  color: var(--color-charcoal);
+  line-height: 1.2;
+  margin-bottom: var(--space-6);
+}
+
+.text {
+  font-size: clamp(1.05rem, 1.5vw, 1.2rem);
+  color: var(--color-gray);
+  line-height: 1.8;
+  margin-bottom: var(--space-8);
+  font-weight: 300;
+}
+
+.signature {
+  font-family: var(--font-accent), serif;
+  font-style: italic;
+  font-size: 22px;
+  color: var(--color-gold);
+}

@@ -1,0 +1,28 @@
+.section {
+  padding: var(--space-20) 0;
+  background-color: #FAF8F5;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-8);
+  margin-bottom: var(--space-12);
+}
+
+@media (min-width: 768px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.ctaWrapper {
+  display: flex;
+  justify-content: center;
+}
