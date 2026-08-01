@@ -52,7 +52,7 @@ export const CartPanel: React.FC = () => {
                     <div className={styles.itemDetails}>
                       <h4 className={styles.itemName}>{name}</h4>
                       <span className={styles.itemPrice}>
-                        {product.price} {t.shop.currency}
+                        {product.price} {t.services.currency}
                       </span>
 
                       <div className={styles.quantityControls}>
@@ -91,7 +91,7 @@ export const CartPanel: React.FC = () => {
             <div className={styles.subtotalRow}>
               <span>{t.cart.subtotal}</span>
               <span className={styles.subtotalVal}>
-                {subtotal} {t.shop.currency}
+                {subtotal} {t.services.currency}
               </span>
             </div>
             <Button
