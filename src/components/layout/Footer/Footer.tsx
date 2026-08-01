@@ -4,13 +4,15 @@ import React, { useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { useLanguage } from '@/context/LanguageContext';
+import { useBooking } from '@/context/BookingContext';
 import { Container } from '@/components/ui/Container/Container';
 import { Button } from '@/components/ui/Button/Button';
-import { MapPin, Phone, Clock, Instagram, Facebook, Send } from '@/components/ui/Icons';
+import { MapPin, Phone, Clock, Instagram, Send, Sparkles } from '@/components/ui/Icons';
 import styles from './Footer.module.css';
 
 export const Footer: React.FC = () => {
-  const { t } = useLanguage();
+  const { lang, t } = useLanguage();
+  const { openBooking } = useBooking();
   const [email, setEmail] = useState('');
   const [subscribed, setSubscribed] = useState(false);
 
@@ -28,6 +30,10 @@ export const Footer: React.FC = () => {
         {/* Newsletter Section */}
         <div className={styles.newsletterCard}>
           <div className={styles.newsletterInfo}>
+            <div className={styles.newsBadge}>
+              <Sparkles size={14} />
+              <span>{lang === 'ar' ? 'مجتمع الاستجمام' : 'Sanctuary Journal'}</span>
+            </div>
             <h3 className={styles.newsletterTitle}>{t.newsletter.title}</h3>
             <p className={styles.newsletterSubtitle}>{t.newsletter.subtitle}</p>
           </div>
@@ -69,27 +75,18 @@ export const Footer: React.FC = () => {
                 target="_blank"
                 rel="noreferrer"
                 className={styles.socialIcon}
-                aria-label="Instagram"
+                aria-label="Instagram @loyalty.spa.sa"
               >
                 <Instagram size={18} />
               </a>
               <a
-                href="https://api.whatsapp.com/send?phone=966506622900"
+                href="https://wa.me/966506622900"
                 target="_blank"
                 rel="noreferrer"
                 className={styles.socialIcon}
-                aria-label="WhatsApp"
+                aria-label="WhatsApp Sanctuary"
               >
                 <Phone size={18} />
-              </a>
-              <a
-                href="https://facebook.com"
-                target="_blank"
-                rel="noreferrer"
-                className={styles.socialIcon}
-                aria-label="Facebook"
-              >
-                <Facebook size={18} />
               </a>
             </div>
           </div>
@@ -101,21 +98,28 @@ export const Footer: React.FC = () => {
               <li><Link href="/" className={styles.link}>{t.nav.home}</Link></li>
               <li><Link href="/about" className={styles.link}>{t.nav.about}</Link></li>
               <li><Link href="/services" className={styles.link}>{t.nav.services}</Link></li>
-              <li><Link href="/shop" className={styles.link}>{t.nav.shop}</Link></li>
+              <li><Link href="/add-ons" className={styles.link}>{t.nav.addOns}</Link></li>
+              <li><Link href="/offers" className={styles.link}>{t.nav.offers}</Link></li>
               <li><Link href="/membership" className={styles.link}>{t.nav.membership}</Link></li>
               <li><Link href="/blog" className={styles.link}>{t.nav.blog}</Link></li>
+              <li><Link href="/contact" className={styles.link}>{t.nav.contact}</Link></li>
             </ul>
           </div>
 
-          {/* Col 3: Services */}
+          {/* Col 3: Services & Quick Booking */}
           <div className={styles.col}>
             <h4 className={styles.colTitle}>{t.footer.services}</h4>
             <ul className={styles.linkList}>
-              <li><Link href="/services#massage" className={styles.link}>{t.services.title}</Link></li>
-              <li><Link href="/services#moroccan" className={styles.link}>Royal Moroccan Bath</Link></li>
-              <li><Link href="/services#facial" className={styles.link}>Facial & Skincare</Link></li>
-              <li><Link href="/offers" className={styles.link}>{t.nav.offers}</Link></li>
+              <li><Link href="/services" className={styles.link}>Swedish & Deep Tissue Massage</Link></li>
+              <li><Link href="/services" className={styles.link}>Royal Moroccan Bath</Link></li>
+              <li><Link href="/services" className={styles.link}>Organic Facial Scrub & Mask</Link></li>
+              <li><Link href="/add-ons" className={styles.link}>Volcanic Hot Stones</Link></li>
             </ul>
+            <div className={styles.footerBookingCTA}>
+              <Button variant="gold" size="sm" onClick={() => openBooking()}>
+                {t.nav.bookNow}
+              </Button>
+            </div>
           </div>
 
           {/* Col 4: Contact & Location */}
@@ -124,11 +128,20 @@ export const Footer: React.FC = () => {
             <ul className={styles.infoList}>
               <li className={styles.infoItem}>
                 <MapPin size={18} className={styles.infoIcon} />
-                <span>{t.footer.address}</span>
+                <a
+                  href="https://maps.google.com"
+                  target="_blank"
+                  rel="noreferrer"
+                  className={styles.mapLink}
+                >
+                  {t.footer.address}
+                </a>
               </li>
               <li className={styles.infoItem}>
                 <Phone size={18} className={styles.infoIcon} />
-                <span dir="ltr">{t.footer.phone}</span>
+                <a href="tel:+966506622900" className={styles.mapLink} dir="ltr">
+                  {t.footer.phone}
+                </a>
               </li>
               <li className={styles.infoItem}>
                 <Clock size={18} className={styles.infoIcon} />

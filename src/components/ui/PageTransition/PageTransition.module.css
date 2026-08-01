@@ -1,0 +1,15 @@
+.transitionWrapper {
+  opacity: 1;
+  transform: scale(1);
+  filter: blur(0px);
+  transition: opacity 0.3s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.3s cubic-bezier(0.16, 1, 0.3, 1),
+              filter 0.3s ease;
+  will-change: opacity, transform, filter;
+}
+
+.transitioning {
+  opacity: 0.88;
+  transform: scale(0.995);
+  filter: blur(2px);
+}

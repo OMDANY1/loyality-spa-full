@@ -1,0 +1,83 @@
+.preloaderOverlay {
+  position: fixed;
+  inset: 0;
+  z-index: 99999;
+  background-color: var(--color-bg-dark, #0d1612);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 1;
+  transition: opacity 0.4s cubic-bezier(0.16, 1, 0.3, 1), visibility 0.4s ease;
+}
+
+.fadeOut {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-4, 1rem);
+  text-align: center;
+}
+
+.logoWrapper {
+  animation: pulseLogo 1.6s ease-in-out infinite alternate;
+}
+
+.logo {
+  height: auto;
+  width: 160px;
+  object-fit: contain;
+}
+
+.lineLoader {
+  width: 140px;
+  height: 2px;
+  background: rgba(212, 175, 55, 0.2);
+  border-radius: var(--radius-full, 9999px);
+  overflow: hidden;
+  position: relative;
+}
+
+.lineFill {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(90deg, transparent, #d4af37, #f3e5ab, transparent);
+  animation: shimmer 1s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+}
+
+.tagline {
+  font-family: var(--font-heading);
+  font-size: var(--text-xs, 0.75rem);
+  letter-spacing: var(--tracking-widest, 0.2em);
+  text-transform: uppercase;
+  color: var(--color-gold-light, #f3e5ab);
+  opacity: 0.85;
+}
+
+@keyframes pulseLogo {
+  0% {
+    transform: scale(0.98);
+    filter: drop-shadow(0 0 4px rgba(212, 175, 55, 0.2));
+  }
+  100% {
+    transform: scale(1.02);
+    filter: drop-shadow(0 0 12px rgba(212, 175, 55, 0.5));
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}

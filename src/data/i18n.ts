@@ -5,7 +5,7 @@ export interface Dictionary {
     home: string;
     about: string;
     services: string;
-    shop: string;
+    addOns: string;
     offers: string;
     membership: string;
     blog: string;
@@ -48,11 +48,16 @@ export interface Dictionary {
     stat3Label: string;
     stat3Val: string;
   };
-  shop: {
+  addOns: {
+    tag: string;
     title: string;
     subtitle: string;
-    addToCart: string;
-    viewProduct: string;
+    bundleNotice: string;
+    bundleDesc: string;
+    singlePrice: string;
+    bundlePrice: string;
+    addToExperience: string;
+    benefitsTitle: string;
     currency: string;
   };
   membership: {
@@ -105,7 +110,11 @@ export interface Dictionary {
     step2: string;
     step3: string;
     step4: string;
+    step5: string;
     selectService: string;
+    selectDuration: string;
+    selectAddons: string;
+    selectAddonsDesc: string;
     selectDate: string;
     selectTime: string;
     yourDetails: string;
@@ -133,21 +142,21 @@ export const dictionaries: Record<Language, Dictionary> = {
       home: 'Home',
       about: 'About',
       services: 'Services',
-      shop: 'Boutique',
+      addOns: 'Luxury Add-ons',
       offers: 'Packages & Offers',
       membership: 'Membership',
       blog: 'Journal',
       contact: 'Contact',
-      bookNow: 'Book Treatment',
-      cart: 'Cart',
+      bookNow: 'Book Experience',
+      cart: 'Bag',
       search: 'Search',
     },
     hero: {
-      badge: 'Exclusive Luxury Sanctuary',
+      badge: 'Exclusive Sanctuary & Wellness Destination',
       title: 'Renew, Experience & Restore Your Harmony',
       subtitle: 'Immerse yourself in an unparalleled wellness journey where expert care meets genuine warmth and quiet luxury.',
       exploreServices: 'Explore Services',
-      bookNow: 'Book Treatment',
+      bookNow: 'Book Ritual',
     },
     intro: {
       tag: 'Sanctuary of Tranquility',
@@ -176,11 +185,16 @@ export const dictionaries: Record<Language, Dictionary> = {
       stat3Label: 'Organic Botanicals',
       stat3Val: '100%',
     },
-    shop: {
-      title: 'The Beauty Boutique',
-      subtitle: 'Pure, organic skin and body care formulations handcrafted to extend your spa experience home.',
-      addToCart: 'Add to Cart',
-      viewProduct: 'View Details',
+    addOns: {
+      tag: 'Ritual Enhancements',
+      title: 'Luxury Spa Add-ons',
+      subtitle: 'Elevate your massage session with specialized holistic rituals designed to amplify relaxation and deep restoration.',
+      bundleNotice: 'Exclusive Bundle Offer',
+      bundleDesc: 'Select 1 Add-on for 30 SAR, or bundle 2 Add-ons for only 50 SAR during your session.',
+      singlePrice: '30 SAR (Single Add-on)',
+      bundlePrice: '50 SAR (Double Bundle - Save 10 SAR)',
+      addToExperience: 'Add to My Experience',
+      benefitsTitle: 'Key Benefits',
       currency: 'SAR',
     },
     membership: {
@@ -221,36 +235,40 @@ export const dictionaries: Record<Language, Dictionary> = {
       services: 'Treatments',
       contactUs: 'Sanctuary Location',
       hours: 'Working Hours',
-      hoursVal: '10:00 AM – 10:00 PM (Daily)',
-      address: 'Loyalty Spa, Premium District, Saudi Arabia',
+      hoursVal: '10:00 AM – 12:00 AM (Daily)',
+      address: 'Loyalty Spa, Northern Ring Road, Riyadh, Saudi Arabia',
       phone: '+966 50 662 2900',
-      rights: 'All rights reserved. Loyalty Spa.',
+      rights: 'All rights reserved. Loyalty Spa 2026.',
     },
     bookingModal: {
-      title: 'Book Your Spa Session',
-      subtitle: 'Select your desired treatment, therapist preference, and time.',
-      step1: '1. Treatment',
-      step2: '2. Date & Time',
-      step3: '3. Guest Details',
-      step4: '4. Confirmation',
-      selectService: 'Select Treatment',
+      title: 'Design Your Wellness Ritual',
+      subtitle: 'Customize your session duration, luxury add-ons, and preferred sanctuary timing.',
+      step1: '1. Experience',
+      step2: '2. Duration',
+      step3: '3. Add-ons',
+      step4: '4. Schedule',
+      step5: '5. Ritual Summary',
+      selectService: 'Select Your Primary Treatment',
+      selectDuration: 'Choose Treatment Duration',
+      selectAddons: 'Select Luxury Add-ons (Optional)',
+      selectAddonsDesc: 'Special pricing: 1 Add-on for 30 SAR / 2 Add-ons for 50 SAR',
       selectDate: 'Preferred Date',
       selectTime: 'Preferred Time Slot',
-      yourDetails: 'Guest Details',
+      yourDetails: 'Guest Information',
       name: 'Full Name',
       phone: 'Phone / WhatsApp Number',
       email: 'Email Address',
       notes: 'Special Requests or Health Notes',
-      confirmBooking: 'Confirm Appointment',
-      successTitle: 'Appointment Confirmed',
-      successDesc: 'We look forward to welcoming you to Loyalty Spa. A confirmation has been sent to your phone.',
+      confirmBooking: 'Reserve Spa Ritual',
+      successTitle: 'Your Sanctuary Ritual is Reserved',
+      successDesc: 'We look forward to welcoming you to Loyalty Spa. A reservation summary has been generated for your visit.',
       close: 'Return to Sanctuary',
     },
     cart: {
-      title: 'Your Shopping Bag',
-      empty: 'Your shopping bag is currently empty.',
+      title: 'Your Selected Rituals',
+      empty: 'Your selection is currently empty.',
       subtotal: 'Subtotal',
-      checkout: 'Proceed to Checkout',
+      checkout: 'Proceed to Reservation',
       remove: 'Remove',
     },
   },
@@ -259,17 +277,17 @@ export const dictionaries: Record<Language, Dictionary> = {
       home: 'الرئيسية',
       about: 'عن السبا',
       services: 'الخدمات',
-      shop: 'المتجر الفاخر',
+      addOns: 'الإضافات الفاخرة',
       offers: 'الباقات والعروض',
       membership: 'برنامج الولاء',
       blog: 'المدونة',
       contact: 'تواصل معنا',
-      bookNow: 'احجزي موعدك',
+      bookNow: 'احجزي التجربة',
       cart: 'السلة',
       search: 'بحث',
     },
     hero: {
-      badge: 'ملاذ الفخامة والاستجمام',
+      badge: 'ملاذ الفخامة والاستجمام الحصري',
       title: 'جددي حياتكِ واكتشفي قمة الرفاهية',
       subtitle: 'انغمسي في تجربة عافية استثنائية يندمج فيها الاهتمام المحترف مع الهدوء العميق والأجواء المريحة.',
       exploreServices: 'استكشفي الخدمات',
@@ -302,11 +320,16 @@ export const dictionaries: Record<Language, Dictionary> = {
       stat3Label: 'منتجات عضوية',
       stat3Val: '١٠٠٪',
     },
-    shop: {
-      title: 'متجر العناية الفاخر',
-      subtitle: 'مستحضرات طبيعية وعضوية مُصنعة بعناية لتستكملي تجربتكِ الفاخرة في المنزل.',
-      addToCart: 'إضافة للسلة',
-      viewProduct: 'تفاصيل المنتج',
+    addOns: {
+      tag: 'تعزيز الجلسة العلاجية',
+      title: 'الإضافات الفاخرة للجلسات',
+      subtitle: 'ارتقي بمستوى جلسة المساج الخاصة بكِ مع خدمات استرخائية متخصصة صُممت لزيادة التوازن والراحة.',
+      bundleNotice: 'عرض الإضافات المميز',
+      bundleDesc: 'اختاري إضافة واحدة بـ ٣٠ ر.س، أو أضيفي إضافتين بـ ٥٠ ر.س فقط أثناء الجلسة.',
+      singlePrice: '٣٠ ر.س (إضافة واحدة)',
+      bundlePrice: '٥٠ ر.س (إضافتين - توفير ١٠ ر.س)',
+      addToExperience: 'أضيفيها لتجربتي',
+      benefitsTitle: 'أبرز الفوائد',
       currency: 'ر.س',
     },
     membership: {
@@ -347,19 +370,23 @@ export const dictionaries: Record<Language, Dictionary> = {
       services: 'الخدمات',
       contactUs: 'موقع السبا',
       hours: 'أوقات العمل',
-      hoursVal: '١٠:٠٠ صباحاً – ١٠:٠٠ مساءً (يومياً)',
-      address: 'سبا الولاء، الحي الراقي، المملكة العربية السعودية',
+      hoursVal: '١٠:٠٠ صباحاً – ١٢:٠٠ منتصف الليل (يومياً)',
+      address: 'سبا الولاء، الطريق الدائري الشمالي، الرياض، المملكة العربية السعودية',
       phone: '9600 662 50 966+',
       rights: 'جميع الحقوق محفوظة. سبا الولاء 2026.',
     },
     bookingModal: {
-      title: 'احجزي موعدكِ في السبا',
-      subtitle: 'اختاري الخدمة المناسبة والوقت المفضّل لديكِ.',
-      step1: '١. الخدمة',
-      step2: '٢. التاريخ والوقت',
-      step3: '٣. تفاصيل الحجز',
-      step4: '٤. التأكيد',
-      selectService: 'اختاري الخدمة',
+      title: 'صممي طقوس الاستجمام الخاصة بكِ',
+      subtitle: 'حددي مدة الجلسة، الإضافات الفاخرة، والوقت المناسب لزيارتكِ.',
+      step1: '١. الجلسة الرئيسية',
+      step2: '٢. المدة الزمنية',
+      step3: '٣. الإضافات الفاخرة',
+      step4: '٤. الموعد',
+      step5: '٥. ملخص الحجز',
+      selectService: 'اختاري الجلسة العلاجية الرئيسية',
+      selectDuration: 'اختاري مدة الجلسة',
+      selectAddons: 'اختاري الإضافات الفاخرة (اختياري)',
+      selectAddonsDesc: 'أسعار خاصة: إضافة واحدة بـ ٣٠ ر.س / إضافتان بـ ٥٠ ر.س',
       selectDate: 'التاريخ المفضّل',
       selectTime: 'الوقت المتاح',
       yourDetails: 'بياناتكِ الشخصية',
@@ -367,9 +394,9 @@ export const dictionaries: Record<Language, Dictionary> = {
       phone: 'رقم الجوال / الواتساب',
       email: 'البريد الإلكتروني',
       notes: 'ملاحظات خاصة',
-      confirmBooking: 'تأكيد الحجز',
+      confirmBooking: 'تأكيد حجز الطقوس',
       successTitle: 'تم تأكيد موعدكِ بنجاح',
-      successDesc: 'نتطلع لاستقبالكِ في سبا الولاء. تم إرسال تفاصيل الحجز إلى هاتفكِ.',
+      successDesc: 'نتطلع لاستقبالكِ في سبا الولاء. تم إعداد ملخص الحجز الخاص بكِ.',
       close: 'العودة للرئيسية',
     },
     cart: {

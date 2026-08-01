@@ -7,6 +7,9 @@ import { Navbar } from '@/components/layout/Navbar/Navbar';
 import { Footer } from '@/components/layout/Footer/Footer';
 import { CartPanel } from '@/components/layout/CartPanel/CartPanel';
 import { BookingModal } from '@/components/layout/BookingModal/BookingModal';
+import { Preloader } from '@/components/ui/Preloader/Preloader';
+import { LuxuryCursor } from '@/components/ui/LuxuryCursor/LuxuryCursor';
+import { PageTransition } from '@/components/ui/PageTransition/PageTransition';
 import '@/styles/globals.css';
 
 const playfair = Playfair_Display({
@@ -69,13 +72,17 @@ export default function RootLayout({
         <a href="#main-content" className="skip-link">
           Skip to main content
         </a>
+        <Preloader />
+        <LuxuryCursor />
         <LanguageProvider>
           <CartProvider>
             <BookingProvider>
               <Navbar />
-              <main id="main-content" style={{ flexGrow: 1 }}>
-                {children}
-              </main>
+              <PageTransition>
+                <main id="main-content" style={{ flexGrow: 1 }}>
+                  {children}
+                </main>
+              </PageTransition>
               <Footer />
               <CartPanel />
               <BookingModal />

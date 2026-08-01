@@ -1,39 +1,45 @@
-.page {
-  padding-top: 100px;
-  background-color: var(--color-cream);
+.aboutPage {
+  padding-bottom: var(--space-20);
 }
 
 .heroHeader {
-  background-color: var(--color-charcoal);
-  color: var(--color-cream);
-  padding: var(--space-20) 0;
+  background: var(--color-charcoal);
+  color: #ffffff;
+  padding: 160px 0 80px;
   text-align: center;
 }
 
+.headerContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .tag {
-  font-size: 13px;
+  display: inline-block;
+  font-size: 0.85rem;
   letter-spacing: 0.15em;
   text-transform: uppercase;
-  color: var(--color-gold);
-  font-weight: 500;
+  color: var(--color-gold-light, #f3e5ab);
   margin-bottom: var(--space-4);
-  display: block;
+  font-weight: 600;
 }
 
 .heroTitle {
   font-size: clamp(2.5rem, 4.5vw, 3.8rem);
   font-weight: 300;
-  line-height: 1.15;
-  color: #FFFFFF;
-  margin-bottom: var(--space-6);
+  margin-bottom: var(--space-4);
+  color: #ffffff;
 }
 
 .heroSubtitle {
-  font-size: 18px;
+  font-size: 1.15rem;
   color: var(--color-sand);
-  line-height: 1.6;
+  line-height: 1.65;
+  font-weight: 300;
 }
 
+/* Story Section */
 .storySection {
   padding: var(--space-20) 0;
 }
@@ -47,45 +53,95 @@
 
 @media (min-width: 1024px) {
   .grid {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 1fr 1fr;
   }
 }
 
 .imageWrapper {
   position: relative;
+  height: 480px;
   width: 100%;
-  aspect-ratio: 4 / 3;
-  border-radius: var(--radius-image);
+  border-radius: var(--radius-xl, 24px);
   overflow: hidden;
-  box-shadow: var(--shadow-xl);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.1);
 }
 
 .image {
   object-fit: cover;
 }
 
+.imageOverlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, transparent 60%, rgba(13, 22, 18, 0.4) 100%);
+}
+
+.textContent {
+  display: flex;
+  flex-direction: column;
+}
+
+.subTag {
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-gold);
+  margin-bottom: var(--space-3);
+}
+
 .sectionTitle {
-  font-size: 32px;
+  font-size: clamp(1.8rem, 3vw, 2.5rem);
+  font-weight: 300;
   color: var(--color-charcoal);
   margin-bottom: var(--space-6);
+  line-height: 1.25;
 }
 
 .paragraph {
-  font-size: 16px;
-  color: var(--color-gray);
-  line-height: 1.8;
-  margin-bottom: var(--space-4);
+  font-size: 1.05rem;
+  color: var(--color-stone);
+  line-height: 1.7;
+  margin-bottom: var(--space-6);
 }
 
+.statsRow {
+  display: flex;
+  align-items: center;
+  gap: var(--space-6);
+  padding-top: var(--space-6);
+  border-top: 1px solid var(--color-sand);
+  flex-wrap: wrap;
+}
+
+.statBox {
+  display: flex;
+  flex-direction: column;
+}
+
+.statVal {
+  font-family: var(--font-heading);
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: var(--color-gold);
+}
+
+.statLabel {
+  font-size: 0.85rem;
+  color: var(--color-stone);
+}
+
+/* Values Section */
 .valuesSection {
   padding: var(--space-20) 0;
-  background-color: #FFFFFF;
+  background: var(--color-sand);
 }
 
 .valuesGrid {
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: repeat(1, 1fr);
   gap: var(--space-8);
+  margin-top: var(--space-12);
 }
 
 @media (min-width: 768px) {
@@ -101,28 +157,36 @@
 }
 
 .valueCard {
-  background-color: var(--color-cream);
-  border-radius: var(--radius-card);
+  background: #ffffff;
+  border-radius: var(--radius-lg, 16px);
   padding: var(--space-8);
-  border: 1px solid var(--color-sand);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  box-shadow: var(--shadow-sm);
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.valueCard h3 {
+  font-size: 1.25rem;
+  font-weight: 400;
+  color: var(--color-charcoal);
+  margin: var(--space-4) 0 var(--space-3) 0;
+}
+
+.valueCard p {
+  font-size: 0.92rem;
+  color: var(--color-stone);
+  line-height: 1.6;
+  margin: 0;
+}
+
+.valueCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 16px 36px rgba(13, 22, 18, 0.08);
 }
 
 .valueIcon {
   color: var(--color-gold);
-  margin-bottom: var(--space-4);
-}
-
-.valueCard h3 {
-  font-size: 20px;
-  color: var(--color-charcoal);
-  margin-bottom: var(--space-2);
-}
-
-.valueCard p {
-  font-size: 14px;
-  color: var(--color-gray);
-  line-height: 1.6;
 }

@@ -1,6 +1,7 @@
 'use client';
 
 import React from 'react';
+import Image from 'next/image';
 import { useLanguage } from '@/context/LanguageContext';
 import { Container } from '@/components/ui/Container/Container';
 import { SectionHeader } from '@/components/ui/SectionHeader/SectionHeader';
@@ -13,10 +14,22 @@ export const TestimonialsSection: React.FC = () => {
 
   return (
     <section className={styles.section}>
-      <Container>
+      <div className={styles.bgWrapper}>
+        <Image
+          src="/images/membership_lounge_1785499201765.jpg"
+          alt="Loyalty Spa Guest Sanctuary"
+          fill
+          sizes="100vw"
+          className={styles.bgImage}
+        />
+        <div className={styles.overlay} />
+      </div>
+
+      <Container className={styles.container}>
         <SectionHeader
           tag={t.testimonials.tag}
           title={t.testimonials.title}
+          light
         />
 
         <div className={styles.grid}>
@@ -28,10 +41,10 @@ export const TestimonialsSection: React.FC = () => {
 
             return (
               <div key={item.id} className={styles.card}>
-                <Quote size={32} className={styles.quoteIcon} />
+                <Quote size={36} className={styles.quoteIcon} />
                 <div className={styles.stars}>
                   {[...Array(item.rating)].map((_, i) => (
-                    <Star key={i} size={16} fill="#C5A47E" color="#C5A47E" />
+                    <Star key={i} size={16} fill="#D4AF37" color="#D4AF37" />
                   ))}
                 </div>
                 <p className={styles.quote}>"{quote}"</p>

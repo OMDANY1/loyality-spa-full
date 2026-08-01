@@ -1,84 +1,270 @@
 .stepsBar {
   display: flex;
+  align-items: center;
   justify-content: space-between;
+  gap: var(--space-2);
   margin-bottom: var(--space-6);
   padding-bottom: var(--space-4);
   border-bottom: 1px solid var(--color-sand);
-  font-size: 13px;
-  color: var(--color-gray);
+  overflow-x: auto;
 }
 
 .stepIndicator {
+  font-size: 0.78rem;
   font-weight: 500;
-  position: relative;
+  color: var(--color-stone);
+  padding: 4px 10px;
+  border-radius: 50px;
+  background: var(--color-sand);
+  white-space: nowrap;
+  transition: all 0.25s ease;
 }
 
 .activeStep {
-  color: var(--color-gold-hover);
-  font-weight: 700;
+  background: var(--color-charcoal);
+  color: var(--color-gold-light, #f3e5ab);
+  font-weight: 600;
 }
 
 .stepContent {
   display: flex;
   flex-direction: column;
-  gap: var(--space-4);
+  gap: var(--space-5);
 }
 
 .sectionHeading {
-  font-size: 16px;
+  font-family: var(--font-heading);
+  font-size: 1.1rem;
+  font-weight: 400;
   color: var(--color-charcoal);
-  font-weight: 500;
+  margin: 0;
 }
 
-.serviceOptions {
+.optionsList {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: var(--space-3);
   max-height: 280px;
   overflow-y: auto;
+  padding-inline-end: 4px;
 }
 
-.serviceOption {
-  padding: 12px 16px;
-  border-radius: var(--radius-button);
-  border: 1px solid var(--color-sand);
-  background-color: #FFFFFF;
-  cursor: pointer;
+.optionCard {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  transition: all var(--transition-fast);
+  padding: var(--space-4);
+  border: 1px solid var(--color-sand);
+  border-radius: var(--radius-md, 10px);
+  background: #ffffff;
+  cursor: pointer;
+  transition: all 0.25s ease;
 }
 
-.serviceOption:hover {
+.optionCard:hover {
   border-color: var(--color-gold);
+  background: var(--color-cream);
 }
 
-.selectedOption {
+.selectedCard {
   border-color: var(--color-gold);
-  background-color: #FAF6F0;
+  background: rgba(212, 175, 55, 0.08);
+  box-shadow: 0 4px 12px rgba(212, 175, 55, 0.15);
 }
 
-.optionInfo {
+.optionMain {
   display: flex;
   flex-direction: column;
+  gap: 2px;
 }
 
 .optionTitle {
-  font-size: 15px;
-  font-weight: 500;
+  font-size: 0.95rem;
+  font-weight: 600;
   color: var(--color-charcoal);
 }
 
 .optionMeta {
-  font-size: 13px;
-  color: var(--color-gray);
+  font-size: 0.82rem;
+  color: var(--color-stone);
 }
 
-.sparkleIcon {
+.goldSparkle {
   color: var(--color-gold);
 }
 
+/* Step 2: Duration Grid */
+.durationGrid {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.durationCard {
+  padding: var(--space-4);
+  border: 1px solid var(--color-sand);
+  border-radius: var(--radius-md, 10px);
+  background: #ffffff;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  transition: all 0.25s ease;
+}
+
+.durationCard:hover {
+  border-color: var(--color-gold);
+  background: var(--color-cream);
+}
+
+.selectedDuration {
+  border-color: var(--color-gold);
+  background: rgba(212, 175, 55, 0.08);
+  box-shadow: 0 4px 12px rgba(212, 175, 55, 0.15);
+}
+
+.durHeader {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.clockIcon {
+  color: var(--color-gold);
+}
+
+.durMins {
+  font-weight: 700;
+  font-size: 1rem;
+  color: var(--color-charcoal);
+}
+
+.durLabel {
+  font-size: 0.85rem;
+  color: var(--color-stone);
+}
+
+.durPrice {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--color-gold);
+  margin-top: 2px;
+}
+
+/* Step 3: Addons List */
+.bundleCallout {
+  background: var(--color-charcoal);
+  color: #ffffff;
+  padding: var(--space-4);
+  border-radius: var(--radius-md, 10px);
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  border: 1px solid rgba(212, 175, 55, 0.3);
+}
+
+.giftIcon {
+  color: var(--color-gold);
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.bundleTitle {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--color-gold-light, #f3e5ab);
+  margin: 0 0 2px 0;
+}
+
+.bundleSub {
+  font-size: 0.82rem;
+  color: var(--color-sand);
+  margin: 0;
+}
+
+.addonsList {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  max-height: 220px;
+  overflow-y: auto;
+  padding-inline-end: 4px;
+}
+
+.addonOption {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: var(--space-3) var(--space-4);
+  border: 1px solid var(--color-sand);
+  border-radius: var(--radius-md, 8px);
+  background: #ffffff;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.addonOption:hover {
+  border-color: var(--color-gold);
+}
+
+.selectedAddon {
+  border-color: var(--color-gold);
+  background: rgba(212, 175, 55, 0.1);
+}
+
+.addonCheck {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  border: 1px solid var(--color-gold);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-gold);
+  flex-shrink: 0;
+}
+
+.selectedAddon .addonCheck {
+  background: var(--color-gold);
+  color: #ffffff;
+}
+
+.addonDetails {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.addonName {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--color-charcoal);
+}
+
+.addonPrice {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--color-gold);
+}
+
+.summarySubtotal {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--space-3) var(--space-4);
+  background: var(--color-cream);
+  border-radius: var(--radius-md, 8px);
+  font-size: 0.9rem;
+  color: var(--color-charcoal);
+
+  strong {
+    font-size: 1.1rem;
+    color: var(--color-gold);
+  }
+}
+
+/* Step 4: Forms & Slots */
 .formGroup {
   display: flex;
   flex-direction: column;
@@ -86,22 +272,21 @@
 }
 
 .label {
-  font-size: 14px;
+  font-size: 0.85rem;
+  font-weight: 600;
   color: var(--color-charcoal);
   display: flex;
   align-items: center;
   gap: 6px;
-
-  font-weight: 500;
 }
 
 .input {
-  padding: 12px 16px;
-  border-radius: var(--radius-form);
+  padding: 10px 14px;
   border: 1px solid var(--color-sand);
-  background-color: #FFFFFF;
-  font-size: 15px;
+  border-radius: var(--radius-md, 8px);
+  font-size: 0.95rem;
   outline: none;
+  transition: border-color 0.2s ease;
 }
 
 .input:focus {
@@ -111,70 +296,127 @@
 .timeSlots {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 10px;
+  gap: var(--space-2);
 }
 
 .timeSlot {
-  padding: 10px;
-  border-radius: var(--radius-button);
+  padding: 8px;
   border: 1px solid var(--color-sand);
-  background-color: #FFFFFF;
-  font-size: 13px;
+  border-radius: var(--radius-md, 6px);
+  background: #ffffff;
+  font-size: 0.82rem;
   color: var(--color-charcoal);
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 6px;
+  gap: 4px;
   cursor: pointer;
-  transition: all var(--transition-fast);
+  transition: all 0.2s ease;
+}
+
+.timeSlot:hover {
+  border-color: var(--color-gold);
 }
 
 .selectedTime {
-  border-color: var(--color-gold);
-  background-color: var(--color-gold);
-  color: var(--color-cream);
+  background: var(--color-charcoal);
+  color: var(--color-gold-light, #f3e5ab);
+  border-color: var(--color-charcoal);
 }
 
 .stepActions {
   display: flex;
+  align-items: center;
   justify-content: space-between;
-  gap: 12px;
+  gap: var(--space-4);
   margin-top: var(--space-4);
 }
 
+/* Step 5: Success & Summary */
 .successStep {
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
   gap: var(--space-4);
-  padding: var(--space-4) 0;
 }
 
 .successIcon {
-  color: var(--color-sage);
+  color: var(--color-gold);
 }
 
 .successTitle {
-  font-size: 24px;
+  font-family: var(--font-heading);
+  font-size: 1.5rem;
   color: var(--color-charcoal);
+  margin: 0;
 }
 
 .successDesc {
-  font-size: 14px;
-  color: var(--color-gray);
-  max-width: 400px;
+  font-size: 0.92rem;
+  color: var(--color-stone);
+  line-height: 1.5;
+  margin: 0;
 }
 
 .bookingSummaryCard {
-  background-color: #FFFFFF;
-  border-radius: var(--radius-button);
-  padding: var(--space-4);
   width: 100%;
+  background: var(--color-cream);
   border: 1px solid var(--color-sand);
+  border-radius: var(--radius-md, 12px);
+  padding: var(--space-5);
   text-align: start;
-  font-size: 14px;
+  font-size: 0.9rem;
+  color: var(--color-charcoal);
   display: flex;
   flex-direction: column;
-  gap: 6px;
+  gap: 8px;
+
+  p {
+    margin: 0;
+  }
+}
+
+.totalRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: var(--space-2);
+  padding-top: var(--space-3);
+  border-top: 1px dashed var(--color-gold);
+  font-size: 1rem;
+
+  strong {
+    font-size: 1.2rem;
+    color: var(--color-gold);
+  }
+}
+
+.successActions {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  width: 100%;
+  margin-top: var(--space-4);
+}
+
+.whatsappBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background: #25d366;
+  color: #ffffff;
+  padding: 12px 20px;
+  border-radius: var(--radius-md, 8px);
+  font-size: 0.95rem;
+  font-weight: 600;
+  text-decoration: none;
+  box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.whatsappBtn:hover {
+  background: #20bd5a;
+  transform: translateY(-2px);
 }

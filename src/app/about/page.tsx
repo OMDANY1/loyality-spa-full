@@ -5,49 +5,75 @@ import Image from 'next/image';
 import { useLanguage } from '@/context/LanguageContext';
 import { Container } from '@/components/ui/Container/Container';
 import { SectionHeader } from '@/components/ui/SectionHeader/SectionHeader';
-import { Shield, Sparkles, Heart, Award } from '@/components/ui/Icons';
+import { Shield, Sparkles, Heart, Award, Check } from '@/components/ui/Icons';
 import styles from './AboutPage.module.css';
 
 export default function AboutPage() {
   const { lang, t } = useLanguage();
 
   return (
-    <div className={styles.page}>
+    <div className={styles.aboutPage}>
       {/* Hero Header */}
-      <div className={styles.heroHeader}>
+      <section className={styles.heroHeader}>
         <Container size="narrow">
-          <span className={styles.tag}>{t.aboutPreview.tag}</span>
-          <h1 className={styles.heroTitle}>{t.aboutPreview.title}</h1>
-          <p className={styles.heroSubtitle}>{t.aboutPreview.description}</p>
+          <div className={styles.headerContent}>
+            <span className={styles.tag}>{t.aboutPreview.tag}</span>
+            <h1 className={styles.heroTitle}>{t.aboutPreview.headline}</h1>
+            <p className={styles.heroSubtitle}>{t.aboutPreview.description}</p>
+          </div>
         </Container>
-      </div>
+      </section>
 
-      {/* Story Section */}
+      {/* Brand Story Section */}
       <section className={styles.storySection}>
         <Container>
           <div className={styles.grid}>
             <div className={styles.imageWrapper}>
               <Image
-                src="/images/moroccan.jpg"
-                alt="Loyalty Spa Interior Atmosphere"
+                src="/images/moroccan_bath_1785499177858.jpg"
+                alt="Loyalty Spa Atmosphere"
                 fill
+                sizes="(max-width: 1024px) 100vw, 50vw"
                 className={styles.image}
               />
+              <div className={styles.imageOverlay} />
             </div>
+
             <div className={styles.textContent}>
+              <span className={styles.subTag}>
+                {lang === 'ar' ? 'أصالة واستجمام' : 'Heritage & Renewal'}
+              </span>
               <h2 className={styles.sectionTitle}>
-                {lang === 'ar' ? 'رسالتنا ورؤيتنا' : 'Our Mission & Vision'}
+                {lang === 'ar'
+                  ? 'فن الاسترخاء الهادئ في قلب المملكة'
+                  : 'The Art of Quiet Luxury & Restorative Wellbeing'}
               </h2>
               <p className={styles.paragraph}>
                 {lang === 'ar'
-                  ? 'تأسس سبا الولاء ليكون ملاذاً يجمع بين الأصالة والعناية الحديثة في المملكة العربية السعودية. نؤمن بأن العافية الحقيقية تنبع من العناية بالتفاصيل الدقيقة والهدوء التام.'
-                  : 'Loyalty Spa was created as a sanctuary fusing timeless Arabic hospitality with modern luxury wellness in Saudi Arabia. We believe true renewal begins when the mind settles and the body is tended to with organic botanicals.'}
+                  ? 'تأسس سبا الولاء ليكون ملاذاً استثنائياً يجمع بين أصالة الضيافة السعودية والطقوس العريقة للعافية والاستجمام. نؤمن بأن السعادة والجمال الحقيقي يبدآن عندما يهدأ الذهن وتستشعر الحواس راحة لا تُنسى.'
+                  : 'Loyalty Spa was established as an exclusive wellness sanctuary fusing refined Saudi hospitality with master therapeutic techniques. We believe true radiance begins when the mind quiets down and the body is nurtured in unhurried peace.'}
               </p>
               <p className={styles.paragraph}>
                 {lang === 'ar'
-                  ? 'كل معالجة في فريقنا تمتلك خبرة واسعة في طقوس الاستجمام والعناية بالبشرة، مما يضمن لكل زائرة تجربة فاخرة وآمنة تماماً.'
-                  : 'Every therapist on our team possesses deep mastery in therapeutic massage, hammam rituals, and esthetic care, ensuring an immaculate, restorative experience for every guest.'}
+                  ? 'كل غرفة علاج في سبا الولاء هي مساحة خاصة صُممت بعناية لتمنحكِ العزلة التامة عن صخب الحياة اليومية، مع معالجات خبيرات يمتلكن أعلى درجات المهارة والاهتمام.'
+                  : 'Every treatment suite at Loyalty Spa is a private sanctuary meticulously engineered to isolate you from urban noise, guided by master therapists committed to your personal wellbeing.'}
               </p>
+
+              {/* Stats Highlights */}
+              <div className={styles.statsRow}>
+                <div className={styles.statBox}>
+                  <span className={styles.statVal}>{t.aboutPreview.stat1Val}</span>
+                  <span className={styles.statLabel}>{t.aboutPreview.stat1Label}</span>
+                </div>
+                <div className={styles.statBox}>
+                  <span className={styles.statVal}>{t.aboutPreview.stat2Val}</span>
+                  <span className={styles.statLabel}>{t.aboutPreview.stat2Label}</span>
+                </div>
+                <div className={styles.statBox}>
+                  <span className={styles.statVal}>{t.aboutPreview.stat3Val}</span>
+                  <span className={styles.statLabel}>{t.aboutPreview.stat3Label}</span>
+                </div>
+              </div>
             </div>
           </div>
         </Container>
@@ -57,8 +83,9 @@ export default function AboutPage() {
       <section className={styles.valuesSection}>
         <Container>
           <SectionHeader
-            tag="Our Core Values"
-            title={lang === 'ar' ? 'قيمنا الأساسية' : 'Pillars of Excellence'}
+            tag={lang === 'ar' ? 'ركائز التميز' : 'Pillars of Excellence'}
+            title={lang === 'ar' ? 'قيمنا الأساسية' : 'Our Core Philosophy'}
+            subtitle={lang === 'ar' ? 'معايير ملكية تضمن لكِ أقصى درجات الراحة والجودة' : 'Uncompromising standards ensuring your complete physical and sensory renewal.'}
           />
 
           <div className={styles.valuesGrid}>

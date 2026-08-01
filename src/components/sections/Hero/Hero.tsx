@@ -1,6 +1,6 @@
 'use client';
 
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useLanguage } from '@/context/LanguageContext';
@@ -13,11 +13,34 @@ import styles from './Hero.module.css';
 export const HeroSection: React.FC = () => {
   const { t } = useLanguage();
   const { openBooking } = useBooking();
+  const [scrollY, setScrollY] = useState(0);
+  const [reducedMotion, setReducedMotion] = useState(false);
+
+  useEffect(() => {
+    if (typeof window === 'undefined') return;
+
+    const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    setReducedMotion(prefersReduced);
+
+    if (prefersReduced) return;
+
+    const handleScroll = () => {
+      setScrollY(window.scrollY);
+    };
+
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  const parallaxOffset = reducedMotion ? 0 : scrollY * 0.35;
 
   return (
     <section className={styles.hero}>
-      {/* Background Image with Overlay */}
-      <div className={styles.bgImageWrapper}>
+      {/* Background Image with Living Ken Burns & Parallax */}
+      <div
+        className={styles.bgImageWrapper}
+        style={{ transform: `translate3d(0, ${parallaxOffset}px, 0)` }}
+      >
         <Image
           src="/images/hero.jpg"
           alt="Loyalty Spa Sanctuary"
@@ -27,6 +50,8 @@ export const HeroSection: React.FC = () => {
           className={styles.bgImage}
         />
         <div className={styles.overlay} />
+        {/* Living Ambient Floating Dust & Particles Overlay */}
+        <div className={styles.ambientParticles} />
       </div>
 
       <Container className={styles.container}>

@@ -4,24 +4,22 @@ import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { useLanguage } from '@/context/LanguageContext';
-import { useCart } from '@/context/CartContext';
 import { useBooking } from '@/context/BookingContext';
 import { Button } from '@/components/ui/Button/Button';
-import { ShoppingBag, Globe, Menu, X } from '@/components/ui/Icons';
+import { Globe, Menu, X } from '@/components/ui/Icons';
 import styles from './Navbar.module.css';
 
 export const Navbar: React.FC = () => {
   const { lang, t, toggleLang } = useLanguage();
-  const { totalQuantity, openCart } = useCart();
   const { openBooking } = useBooking();
   const [scrolled, setScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
-      setScrolled(window.scrollY > 40);
+      setScrolled(window.scrollY > 30);
     };
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
@@ -31,7 +29,7 @@ export const Navbar: React.FC = () => {
     { href: '/', label: t.nav.home },
     { href: '/about', label: t.nav.about },
     { href: '/services', label: t.nav.services },
-    { href: '/shop', label: t.nav.shop },
+    { href: '/add-ons', label: t.nav.addOns },
     { href: '/offers', label: t.nav.offers },
     { href: '/membership', label: t.nav.membership },
     { href: '/blog', label: t.nav.blog },
@@ -46,10 +44,10 @@ export const Navbar: React.FC = () => {
           <Image
             src={logoSrc}
             alt="Loyalty Spa"
-            width={150}
-            height={55}
+            width={140}
+            height={50}
             priority
-            className={styles.logo}
+            className={`${styles.logo} ${scrolled ? styles.logoScrolled : ''}`}
           />
         </Link>
 
@@ -75,19 +73,7 @@ export const Navbar: React.FC = () => {
             <span>{lang === 'en' ? 'العربية' : 'EN'}</span>
           </button>
 
-          {/* Cart Icon */}
-          <button
-            onClick={openCart}
-            className={styles.iconBtn}
-            aria-label="Open Shopping Bag"
-          >
-            <ShoppingBag size={20} />
-            {totalQuantity > 0 && (
-              <span className={styles.badge}>{totalQuantity}</span>
-            )}
-          </button>
-
-          {/* Book Now Button */}
+          {/* Book Experience CTA */}
           <div className={styles.desktopBookBtn}>
             <Button
               variant={scrolled ? 'primary' : 'gold'}

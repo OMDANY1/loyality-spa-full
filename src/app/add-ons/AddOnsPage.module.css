@@ -1,0 +1,320 @@
+.addOnsPage {
+  padding-bottom: var(--space-20);
+}
+
+.heroBanner {
+  background: var(--color-charcoal);
+  color: #ffffff;
+  padding: 160px 0 80px;
+  position: relative;
+  overflow: hidden;
+}
+
+.bannerContent {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(212, 175, 55, 0.15);
+  border: 1px solid rgba(212, 175, 55, 0.4);
+  color: var(--color-gold-light, #f3e5ab);
+  font-size: 13px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  padding: 6px 18px;
+  border-radius: 9999px;
+  margin-bottom: var(--space-6);
+}
+
+.badgeIcon {
+  color: var(--color-gold);
+}
+
+.title {
+  font-size: clamp(2.5rem, 4.5vw, 3.8rem);
+  font-weight: 300;
+  margin-bottom: var(--space-4);
+  color: #ffffff;
+}
+
+.subtitle {
+  font-size: 1.15rem;
+  color: var(--color-sand);
+  line-height: 1.6;
+  margin-bottom: var(--space-8);
+  font-weight: 300;
+}
+
+/* Bundle Card */
+.bundleCard {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(212, 175, 55, 0.35);
+  backdrop-filter: blur(12px);
+  border-radius: var(--radius-lg, 16px);
+  padding: var(--space-6) var(--space-8);
+  width: 100%;
+  max-width: 680px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.bundleHeader {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: var(--space-2);
+}
+
+.bundleHeader h3 {
+  font-family: var(--font-heading);
+  font-size: 1.35rem;
+  color: var(--color-gold-light, #f3e5ab);
+  margin: 0;
+}
+
+.bundleIcon {
+  color: var(--color-gold);
+}
+
+.bundleDesc {
+  font-size: 0.95rem;
+  color: var(--color-sand);
+  margin-bottom: var(--space-4);
+}
+
+.pricePills {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-4);
+  flex-wrap: wrap;
+}
+
+.singlePill,
+.doublePill {
+  padding: 8px 18px;
+  border-radius: 50px;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.singlePill {
+  background: rgba(255, 255, 255, 0.1);
+  color: var(--color-cream);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.doublePill {
+  background: linear-gradient(135deg, #d4af37, #aa820a);
+  color: #ffffff;
+  box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
+}
+
+/* Showcase Section */
+.showcaseSection {
+  padding: var(--space-16) 0;
+}
+
+.addonsGrid {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: var(--space-8);
+}
+
+@media (min-width: 768px) {
+  .addonsGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1200px) {
+  .addonsGrid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Addon Card */
+.addonCard {
+  background: #ffffff;
+  border-radius: var(--radius-lg, 16px);
+  overflow: hidden;
+  border: 1px solid var(--color-sand);
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1),
+              box-shadow 0.3s cubic-bezier(0.16, 1, 0.3, 1),
+              border-color 0.3s ease;
+}
+
+.addonCard:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 40px rgba(13, 22, 18, 0.1);
+  border-color: var(--color-gold);
+}
+
+.popularBadge {
+  position: absolute;
+  top: 16px;
+  inset-inline-end: 16px;
+  z-index: 10;
+  background: var(--color-gold);
+  color: #ffffff;
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 4px 12px;
+  border-radius: 50px;
+  letter-spacing: 0.05em;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.cardImageWrapper {
+  position: relative;
+  height: 220px;
+  width: 100%;
+  overflow: hidden;
+}
+
+.cardImage {
+  object-fit: cover;
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.addonCard:hover .cardImage {
+  transform: scale(1.06);
+}
+
+.cardOverlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, transparent 50%, rgba(13, 22, 18, 0.4) 100%);
+}
+
+.cardBody {
+  padding: var(--space-6);
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.cardHeader {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: var(--space-3);
+  margin-bottom: var(--space-3);
+}
+
+.cardTitle {
+  font-size: 1.3rem;
+  font-weight: 400;
+  color: var(--color-charcoal);
+  margin: 0;
+}
+
+.priceTag {
+  display: flex;
+  align-items: baseline;
+  gap: 4px;
+  color: var(--color-gold);
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.amount {
+  font-size: 1.4rem;
+}
+
+.currency {
+  font-size: 0.85rem;
+}
+
+.cardDesc {
+  font-size: 0.95rem;
+  color: var(--color-stone);
+  line-height: 1.55;
+  margin-bottom: var(--space-5);
+}
+
+.benefitsBox {
+  background: var(--color-cream);
+  padding: var(--space-4);
+  border-radius: var(--radius-md, 8px);
+  margin-bottom: var(--space-6);
+  border-inline-start: 3px solid var(--color-gold);
+}
+
+.benefitsHeading {
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--color-gold);
+  margin-bottom: var(--space-2);
+}
+
+.benefitsList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.benefitsList li {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.88rem;
+  color: var(--color-charcoal);
+}
+
+.checkIcon {
+  color: var(--color-gold);
+  flex-shrink: 0;
+}
+
+.cardFooter {
+  margin-top: auto;
+}
+
+/* Bottom CTA Banner */
+.ctaBannerSection {
+  padding-top: var(--space-8);
+}
+
+.ctaCard {
+  background: linear-gradient(135deg, var(--color-charcoal) 0%, #15241d 100%);
+  color: #ffffff;
+  border-radius: var(--radius-xl, 24px);
+  padding: var(--space-12) var(--space-8);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid rgba(212, 175, 55, 0.3);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
+}
+
+.ctaTitle {
+  font-size: clamp(1.8rem, 3.5vw, 2.8rem);
+  font-weight: 300;
+  margin-bottom: var(--space-4);
+  color: #ffffff;
+}
+
+.ctaDesc {
+  font-size: 1.1rem;
+  color: var(--color-sand);
+  max-width: 640px;
+  margin-bottom: var(--space-8);
+}
