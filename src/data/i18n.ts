@@ -10,6 +10,7 @@ export interface Dictionary {
     membership: string;
     blog: string;
     contact: string;
+    gift: string;
     bookNow: string;
     cart: string;
     search: string;
@@ -147,6 +148,7 @@ export const dictionaries: Record<Language, Dictionary> = {
       membership: 'Membership',
       blog: 'Journal',
       contact: 'Contact',
+      gift: 'Gift',
       bookNow: 'Book Experience',
       cart: 'Bag',
       search: 'Search',
@@ -282,6 +284,7 @@ export const dictionaries: Record<Language, Dictionary> = {
       membership: 'برنامج الولاء',
       blog: 'المدونة',
       contact: 'تواصل معنا',
+      gift: 'الإهداء',
       bookNow: 'احجزي التجربة',
       cart: 'السلة',
       search: 'بحث',

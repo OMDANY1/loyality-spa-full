@@ -1,0 +1,129 @@
+.overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.backdropBlur {
+  position: absolute;
+  inset: 0;
+  background: rgba(19, 22, 20, 0.75);
+  backdrop-filter: blur(16px);
+}
+
+.particlesContainer {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.goldParticle {
+  position: absolute;
+  left: 50%;
+  top: 60%;
+  width: 6px;
+  height: 6px;
+  background: radial-gradient(circle, #f3e5ab 0%, #d4af37 100%);
+  border-radius: 50%;
+  box-shadow: 0 0 8px rgba(212, 175, 55, 0.8);
+}
+
+.stage {
+  position: relative;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 520px;
+}
+
+/* Envelope Box */
+.envelopeBox {
+  position: relative;
+  width: 100%;
+  max-width: 480px;
+  height: 320px;
+  perspective: 1000px;
+  display: flex;
+  justify-content: center;
+}
+
+.envelopeBack {
+  position: absolute;
+  inset: 0;
+  background: #f4efea;
+  border-radius: 12px;
+  border: 1px solid rgba(212, 175, 55, 0.4);
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.3);
+}
+
+.envelopeFrontCover {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 220px;
+  background: linear-gradient(180deg, #ede7e0 0%, #f4efea 100%);
+  border-radius: 0 0 12px 12px;
+  border: 1px solid rgba(212, 175, 55, 0.35);
+  border-top: none;
+  z-index: 5;
+  clip-path: polygon(0 40px, 50% 0, 100% 40px, 100% 100%, 0 100%);
+}
+
+.envelopeTopFlap {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 160px;
+  background: linear-gradient(180deg, #f4efea 0%, #ede7e0 100%);
+  border-radius: 12px 12px 0 0;
+  border: 1px solid rgba(212, 175, 55, 0.4);
+  border-bottom: none;
+  z-index: 6;
+  clip-path: polygon(0 0, 100% 0, 50% 100%);
+  backface-visibility: hidden;
+}
+
+.waxSealWrapper {
+  position: absolute;
+  top: 130px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 8;
+  cursor: pointer;
+}
+
+.waxSealCircle {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: radial-gradient(circle, #aa820a 0%, #785a06 100%);
+  border: 2px solid #d4af37;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3),
+              inset 0 2px 4px rgba(255, 255, 255, 0.3);
+}
+
+.waxLogo {
+  object-fit: contain;
+  filter: brightness(1.2);
+}
+
+.cardSlidingWrapper {
+  position: absolute;
+  top: -120px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}

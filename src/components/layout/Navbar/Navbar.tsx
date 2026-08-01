@@ -32,6 +32,7 @@ export const Navbar: React.FC = () => {
     { href: '/add-ons', label: t.nav.addOns },
     { href: '/offers', label: t.nav.offers },
     { href: '/membership', label: t.nav.membership },
+    { href: '/gift', label: t.nav.gift },
     { href: '/blog', label: t.nav.blog },
     { href: '/contact', label: t.nav.contact },
   ];

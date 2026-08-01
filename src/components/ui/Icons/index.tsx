@@ -68,6 +68,9 @@ export const Facebook = createIcon('Facebook', 'M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8
 export const ShieldCheck = createIcon('ShieldCheck', 'M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z', [['path', { d: 'm9 12 2 2 4-4' }]]);
 export const Gift = createIcon('Gift', 'M20 12v10H4V12', [['rect', { width: '20', height: '5', x: '2', y: '7', rx: '1' }], ['path', { d: 'M12 22V7' }], ['path', { d: 'M12 7H7.5a2.5 2.5 0 0 1 0-5C11 2 12 7 12 7z' }], ['path', { d: 'M12 7h4.5a2.5 2.5 0 0 0 0-5C13 2 12 7 12 7z' }]]);
 export const Quote = createIcon('Quote', 'M3 21c3 0 7-1 7-8V5c0-1.25-.756-2.017-2-2H4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2 1 0 1 0 1 1v1c0 1-1 2-2 2s-1 .008-1 1.031V20c0 1 0 1 1 1z', [['path', { d: 'M15 21c3 0 7-1 7-8V5c0-1.25-.757-2.017-2-2h-4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2 1 0 1 0 1 1v1c0 1-1 2-2 2s-1 .008-1 1.031V20c0 1 0 1 1 1z' }]]);
+export const Download = createIcon('Download', 'M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4', [['polyline', { points: '7 10 12 15 17 10' }], ['line', { x1: '12', x2: '12', y1: '15', y2: '3' }]]);
+export const RefreshCw = createIcon('RefreshCw', 'M3 12a9 9 0 0 1 15-6.7L21 8', [['polyline', { points: '21 3 21 8 16 8' }], ['path', { d: 'M21 12a9 9 0 0 1-15 6.7L3 16' }], ['polyline', { points: '3 21 3 16 8 16' }]]);
+
 
 
 

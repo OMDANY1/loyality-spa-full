@@ -1,0 +1,233 @@
+.cardContainer {
+  width: 100%;
+  max-width: 480px;
+  min-height: 640px;
+  background: #faf7f2;
+  border-radius: 16px;
+  padding: 32px 28px 24px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12),
+              0 2px 10px rgba(0, 0, 0, 0.05);
+  border: 1px solid rgba(212, 175, 55, 0.25);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-sizing: border-box;
+}
+
+.cardContainer.rtl {
+  direction: rtl;
+  text-align: center;
+}
+
+.cardContainer.ltr {
+  direction: ltr;
+  text-align: center;
+}
+
+/* Header Logo */
+.headerLogoWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.headerLogo {
+  object-fit: contain;
+  height: auto;
+}
+
+/* Decorative Gold Line with Gift Box Icon */
+.decorativeLineRow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  margin-bottom: 28px;
+  width: 100%;
+}
+
+.line {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(212, 175, 55, 0.5) 20%, rgba(212, 175, 55, 0.5) 80%, transparent);
+  width: 100%;
+}
+
+.giftIconBadge {
+  position: absolute;
+  inset-inline-end: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #faf7f2;
+  padding: 0 6px;
+}
+
+/* Content Body */
+.cardContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-grow: 1;
+  justify-content: center;
+}
+
+.fieldBlock {
+  width: 100%;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.label {
+  font-size: 0.95rem;
+  letter-spacing: 0.08em;
+  color: #333333;
+  font-weight: 500;
+  margin-bottom: 6px;
+  text-transform: uppercase;
+}
+
+.valueRow {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.nameValue {
+  font-size: 1.6rem;
+  color: var(--color-gold, #cca872);
+  margin-bottom: 4px;
+}
+
+.arCalligraphy {
+  font-family: var(--font-heading), 'Amiri', 'Traditional Arabic', serif;
+  font-weight: 600;
+}
+
+.enCalligraphy {
+  font-family: 'Dancing Script', 'Caveat', 'Great Vibes', cursive, serif;
+  font-weight: 600;
+  font-size: 1.8rem;
+}
+
+.underline {
+  height: 1px;
+  background: rgba(212, 175, 55, 0.4);
+  width: 100%;
+}
+
+.messageBlock {
+  margin: 20px 0 24px;
+  width: 90%;
+}
+
+.messageText {
+  font-size: 1.05rem;
+  line-height: 1.65;
+  color: #222222;
+  font-weight: 400;
+  margin: 0;
+  white-space: pre-line;
+}
+
+/* Infinity Divider */
+.dividerBlock {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 12px;
+  width: 100%;
+}
+
+.infinityLineRow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  width: 70%;
+  margin-bottom: 10px;
+}
+
+.miniLine {
+  height: 1px;
+  background: rgba(212, 175, 55, 0.4);
+  flex-grow: 1;
+}
+
+.infinitySymbol {
+  display: flex;
+  align-items: center;
+}
+
+.brandTitle {
+  font-size: 0.85rem;
+  letter-spacing: 0.25em;
+  color: var(--color-gold, #cca872);
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+/* Stone Stack Icon */
+.stoneStackWrapper {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 24px;
+}
+
+/* Dark Green Bottom Banner */
+.bottomBanner {
+  background: #1b3026;
+  border-radius: 14px;
+  padding: 16px 20px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  color: #ffffff;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+}
+
+.bannerIconWrapper {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(212, 175, 55, 0.15);
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.bannerTextGroup {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2px;
+}
+
+.rtl .bannerTextGroup {
+  align-items: flex-start;
+}
+
+.bannerTitle {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--color-gold, #cca872);
+  line-height: 1.2;
+}
+
+.bannerSubTitle {
+  font-size: 0.75rem;
+  letter-spacing: 0.2em;
+  color: var(--color-gold, #cca872);
+  font-weight: 500;
+  opacity: 0.9;
+}
+
+.bannerTerms {
+  font-size: 0.72rem;
+  color: rgba(255, 255, 255, 0.75);
+  line-height: 1.3;
+}

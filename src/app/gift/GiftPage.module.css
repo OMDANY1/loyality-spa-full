@@ -1,0 +1,147 @@
+.giftPage {
+  padding-bottom: var(--space-20, 80px);
+  min-height: 100vh;
+  background: var(--color-ivory, #faf7f2);
+}
+
+.heroBanner {
+  background: var(--color-charcoal, #131614);
+  color: #ffffff;
+  padding: 160px 0 70px;
+  position: relative;
+  overflow: hidden;
+}
+
+.bannerContent {
+  max-width: 760px;
+  margin: 0 auto;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.bannerTag {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(212, 175, 55, 0.15);
+  border: 1px solid rgba(212, 175, 55, 0.4);
+  color: var(--color-gold-light, #f3e5ab);
+  font-size: 13px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  padding: 6px 18px;
+  border-radius: 9999px;
+  margin-bottom: var(--space-4, 16px);
+}
+
+.bannerTitle {
+  font-family: var(--font-heading);
+  font-size: clamp(2.4rem, 4vw, 3.6rem);
+  font-weight: 300;
+  margin-bottom: var(--space-4, 16px);
+  color: #ffffff;
+}
+
+.bannerSubtitle {
+  font-size: 1.1rem;
+  color: var(--color-sand, #e5dccb);
+  line-height: 1.6;
+  font-weight: 300;
+  margin: 0;
+}
+
+/* Content Layout */
+.contentSection {
+  padding: 60px 0;
+}
+
+.gridContainer {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 40px;
+  align-items: start;
+}
+
+/* Mobile Layout Order: Preview first, Form second */
+@media (max-width: 1023px) {
+  .gridContainer {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+}
+
+@media (min-width: 1024px) {
+  .gridContainer {
+    grid-template-columns: 1fr 1fr;
+    gap: 48px;
+  }
+}
+
+.formCol {
+  width: 100%;
+}
+
+.previewCol {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: sticky;
+  top: 100px;
+}
+
+.previewHeader {
+  margin-bottom: 16px;
+}
+
+.previewTag {
+  font-size: 0.85rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-gold, #cca872);
+  font-weight: 600;
+}
+
+.previewCardFrame {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+/* Revealed Section */
+.revealedSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 0;
+}
+
+.finalCardWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 520px;
+  animation: fadeIn 0.6s ease forwards;
+}
+
+.cardFrame {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 28px;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
