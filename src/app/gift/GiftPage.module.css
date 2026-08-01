@@ -2,12 +2,14 @@
   padding-bottom: var(--space-20, 80px);
   min-height: 100vh;
   background: var(--color-ivory, #faf7f2);
+  overflow-x: hidden;
+  width: 100%;
 }
 
 .heroBanner {
   background: var(--color-charcoal, #131614);
   color: #ffffff;
-  padding: 160px 0 70px;
+  padding: clamp(120px, 15vw, 160px) 0 60px;
   position: relative;
   overflow: hidden;
 }
@@ -19,6 +21,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding: 0 16px;
 }
 
 .bannerTag {
@@ -28,24 +31,24 @@
   background: rgba(212, 175, 55, 0.15);
   border: 1px solid rgba(212, 175, 55, 0.4);
   color: var(--color-gold-light, #f3e5ab);
-  font-size: 13px;
+  font-size: clamp(11px, 2.5vw, 13px);
   letter-spacing: 0.15em;
   text-transform: uppercase;
-  padding: 6px 18px;
+  padding: 5px 16px;
   border-radius: 9999px;
   margin-bottom: var(--space-4, 16px);
 }
 
 .bannerTitle {
   font-family: var(--font-heading);
-  font-size: clamp(2.4rem, 4vw, 3.6rem);
+  font-size: clamp(2rem, 5vw, 3.6rem);
   font-weight: 300;
   margin-bottom: var(--space-4, 16px);
   color: #ffffff;
 }
 
 .bannerSubtitle {
-  font-size: 1.1rem;
+  font-size: clamp(0.95rem, 2.5vw, 1.1rem);
   color: var(--color-sand, #e5dccb);
   line-height: 1.6;
   font-weight: 300;
@@ -54,13 +57,13 @@
 
 /* Content Layout */
 .contentSection {
-  padding: 60px 0;
+  padding: clamp(32px, 6vw, 60px) 0;
 }
 
 .gridContainer {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 40px;
+  gap: 36px;
   align-items: start;
 }
 
@@ -70,12 +73,22 @@
     display: flex;
     flex-direction: column-reverse;
   }
+
+  .previewCol {
+    position: static;
+    margin-bottom: 8px;
+  }
 }
 
 @media (min-width: 1024px) {
   .gridContainer {
     grid-template-columns: 1fr 1fr;
     gap: 48px;
+  }
+
+  .previewCol {
+    position: sticky;
+    top: 100px;
   }
 }
 
@@ -88,12 +101,10 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  position: sticky;
-  top: 100px;
 }
 
 .previewHeader {
-  margin-bottom: 16px;
+  margin-bottom: 12px;
 }
 
 .previewTag {
@@ -116,7 +127,8 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 40px 0;
+  padding: 32px 0;
+  width: 100%;
 }
 
 .finalCardWrapper {
@@ -132,7 +144,7 @@
   width: 100%;
   display: flex;
   justify-content: center;
-  margin-bottom: 28px;
+  margin-bottom: 24px;
 }
 
 @keyframes fadeIn {

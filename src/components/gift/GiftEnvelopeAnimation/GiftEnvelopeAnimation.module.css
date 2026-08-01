@@ -5,14 +5,14 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 20px;
+  padding: 16px;
   box-sizing: border-box;
 }
 
 .backdropBlur {
   position: absolute;
   inset: 0;
-  background: rgba(19, 22, 20, 0.82);
+  background: rgba(19, 22, 20, 0.84);
   backdrop-filter: blur(18px);
 }
 
@@ -40,16 +40,15 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 100%;
-  max-width: 520px;
+  width: min(92vw, 520px);
+  margin: 0 auto;
 }
 
 /* Envelope Container */
 .envelopeContainer {
   position: relative;
-  width: 100%;
-  max-width: 480px;
-  height: 330px;
+  width: min(92vw, 480px);
+  height: clamp(260px, 58vw, 330px);
   perspective: 1200px;
   display: flex;
   justify-content: center;
@@ -62,7 +61,7 @@
   inset: 0;
   background: #fbf8f3;
   border-radius: 16px;
-  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.35),
+  box-shadow: 0 25px 55px rgba(0, 0, 0, 0.35),
               0 10px 20px rgba(0, 0, 0, 0.15);
   border: 1px solid transparent;
   background-image: linear-gradient(#fbf8f3, #f3ede2),
@@ -97,7 +96,7 @@
   bottom: 0;
   left: 0;
   right: 0;
-  height: 225px;
+  height: clamp(170px, 40vw, 225px);
   background: linear-gradient(180deg, #f7f1e7 0%, #fbf8f3 100%);
   border-radius: 0 0 16px 16px;
   z-index: 5;
@@ -116,7 +115,7 @@
   top: 0;
   left: 0;
   right: 0;
-  height: 175px;
+  height: clamp(130px, 30vw, 175px);
   background: linear-gradient(180deg, #fbf8f3 0%, #f2e9db 100%);
   border-radius: 16px 16px 0 0;
   z-index: 6;
@@ -133,15 +132,15 @@
 /* Official Wax Seal */
 .waxSealWrapper {
   position: absolute;
-  top: 145px;
+  top: clamp(110px, 25vw, 145px);
   left: 50%;
   transform: translateX(-50%);
   z-index: 8;
 }
 
 .waxSealBody {
-  width: 58px;
-  height: 58px;
+  width: clamp(46px, 10vw, 58px);
+  height: clamp(46px, 10vw, 58px);
   border-radius: 50%;
   background: radial-gradient(circle at 35% 35%, #cca872 0%, #8c6a15 65%, #594205 100%);
   border: 2px solid #f3e5ab;
@@ -153,8 +152,8 @@
 }
 
 .waxSealRing {
-  width: 44px;
-  height: 44px;
+  width: clamp(34px, 8vw, 44px);
+  height: clamp(34px, 8vw, 44px);
   border-radius: 50%;
   border: 1px dashed rgba(255, 255, 255, 0.5);
   display: flex;
@@ -165,4 +164,6 @@
 .waxLogo {
   object-fit: contain;
   filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.4));
+  max-width: 80%;
+  height: auto;
 }
