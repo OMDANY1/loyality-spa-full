@@ -30,7 +30,7 @@ export default function AboutPage() {
           <div className={styles.grid}>
             <div className={styles.imageWrapper}>
               <Image
-                src="/images/moroccan_bath_1785499177858.jpg"
+                src="/images/about_sanctuary_bg_1785587592001.jpg"
                 alt="Loyalty Spa Atmosphere"
                 fill
                 sizes="(max-width: 1024px) 100vw, 50vw"

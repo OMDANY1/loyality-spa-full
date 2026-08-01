@@ -17,7 +17,7 @@ export const MembershipTeaserSection: React.FC = () => {
     <section className={styles.section}>
       <div className={styles.bgWrapper}>
         <Image
-          src="/images/membership.jpg"
+          src="/images/membership_lounge_bg_1785587604798.jpg"
           alt="Loyalty Spa Membership Lounge"
           fill
           sizes="100vw"

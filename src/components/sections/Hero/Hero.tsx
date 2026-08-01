@@ -42,7 +42,7 @@ export const HeroSection: React.FC = () => {
         style={{ transform: `translate3d(0, ${parallaxOffset}px, 0)` }}
       >
         <Image
-          src="/images/hero.jpg"
+          src="/images/hero_sanctuary_bg_1785587382099.jpg"
           alt="Loyalty Spa Sanctuary"
           fill
           priority

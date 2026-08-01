@@ -27,7 +27,7 @@ export const servicesData: Service[] = [
     benefitsAr: ['إزالة التوتر العضلي', 'تحسين الدورة الدموية', 'تهدئة الجهاز العصبي'],
     duration: 60,
     price: 270,
-    image: '/images/therapist_massage_1785499152651.jpg',
+    image: '/images/service_massage_1h_1785587520945.jpg',
     popular: true,
   },
   {
@@ -42,7 +42,7 @@ export const servicesData: Service[] = [
     benefitsAr: ['استرخاء الأنسجة العميق', 'فك عقد التصلب', 'إعادة توازن الجسم'],
     duration: 90,
     price: 350,
-    image: '/images/hero_spa_bg_1785499140731.jpg',
+    image: '/images/service_massage_90m_1785587533507.jpg',
     popular: true,
   },
   {
@@ -57,7 +57,7 @@ export const servicesData: Service[] = [
     benefitsAr: ['تدليل كامل من الرأس للقدمين', 'هدوء استثنائي عالي الفخامة', 'تجديد شامل للذهن والجسم'],
     duration: 120,
     price: 430,
-    image: '/images/membership_lounge_1785499201765.jpg',
+    image: '/images/service_massage_120m_1785587546948.jpg',
   },
   {
     id: 's4',
@@ -71,7 +71,7 @@ export const servicesData: Service[] = [
     benefitsAr: ['تخفيف إجهاد الرأس', 'تغذية بصيلات الشعر', 'تعزيز صحة فروة الرأس'],
     duration: 45,
     price: 190,
-    image: '/images/skincare_facial_1785499166825.jpg',
+    image: '/images/service_scalp_massage_1785587558620.jpg',
   },
   {
     id: 's5',
@@ -85,7 +85,7 @@ export const servicesData: Service[] = [
     benefitsAr: ['تقشير عميق للبشرة', 'إزالة السموم والخلايا الميتة', 'نضارة ونعومة مخملية'],
     duration: 75,
     price: 320,
-    image: '/images/moroccan_bath_1785499177858.jpg',
+    image: '/images/service_moroccan_bath_1785587569813.jpg',
     popular: true,
   },
   {
@@ -100,7 +100,7 @@ export const servicesData: Service[] = [
     benefitsAr: ['ترطيب عميق لطبقات البشرة', 'إشراقة ونضارة فورية', 'تنعيم ملمس البشرة'],
     duration: 60,
     price: 290,
-    image: '/images/skincare_facial_1785499166825.jpg',
+    image: '/images/service_rose_facial_1785587581157.jpg',
     popular: true,
   },
 ];
