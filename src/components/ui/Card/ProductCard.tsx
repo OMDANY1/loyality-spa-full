@@ -41,11 +41,11 @@ export const ProductCard: React.FC<{ product: Product }> = ({ product }) => {
 
         <div className={styles.footer}>
           <span className={styles.price}>
-            {product.price} {t.shop.currency}
+            {product.price} {t.services.currency}
           </span>
           <Button variant="gold" size="sm" onClick={() => addToCart(product)}>
             <ShoppingBag size={16} />
-            {t.shop.addToCart}
+            {t.addOns.addToExperience}
           </Button>
         </div>
       </div>
