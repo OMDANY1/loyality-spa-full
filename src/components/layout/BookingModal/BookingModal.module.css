@@ -257,11 +257,11 @@
   border-radius: var(--radius-md, 8px);
   font-size: 0.9rem;
   color: var(--color-charcoal);
+}
 
-  strong {
-    font-size: 1.1rem;
-    color: var(--color-gold);
-  }
+.summarySubtotal strong {
+  font-size: 1.1rem;
+  color: var(--color-gold);
 }
 
 /* Step 4: Forms & Slots */
@@ -371,10 +371,10 @@
   display: flex;
   flex-direction: column;
   gap: 8px;
+}
 
-  p {
-    margin: 0;
-  }
+.bookingSummaryCard p {
+  margin: 0;
 }
 
 .totalRow {
@@ -385,11 +385,11 @@
   padding-top: var(--space-3);
   border-top: 1px dashed var(--color-gold);
   font-size: 1rem;
+}
 
-  strong {
-    font-size: 1.2rem;
-    color: var(--color-gold);
-  }
+.totalRow strong {
+  font-size: 1.2rem;
+  color: var(--color-gold);
 }
 
 .successActions {
