@@ -45,18 +45,18 @@ export default function AboutPage() {
               </span>
               <h2 className={styles.sectionTitle}>
                 {lang === 'ar'
-                  ? 'فن الاسترخاء الهادئ في قلب المملكة'
-                  : 'The Art of Quiet Luxury & Restorative Wellbeing'}
+                  ? 'فن الاسترخاء الهادئ في راحة منزلكِ'
+                  : 'The Art of Quiet Luxury Delivered to Your Home'}
               </h2>
               <p className={styles.paragraph}>
                 {lang === 'ar'
-                  ? 'تأسس سبا الولاء ليكون ملاذاً استثنائياً يجمع بين أصالة الضيافة السعودية والطقوس العريقة للعافية والاستجمام. نؤمن بأن السعادة والجمال الحقيقي يبدآن عندما يهدأ الذهن وتستشعر الحواس راحة لا تُنسى.'
-                  : 'Loyalty Spa was established as an exclusive wellness sanctuary fusing refined Saudi hospitality with master therapeutic techniques. We believe true radiance begins when the mind quiets down and the body is nurtured in unhurried peace.'}
+                  ? 'تأسس Loyalty Spa لتقديم خدمة السبا والاستجمام المنزلي الفاخر، مدمجاً أصالة الضيافة السعودية مع أرقى طقوس العافية والجمال. نؤمن بأن الراحة الحقيقية تبدأ عندما تصلكِ العناية الملكية في منزلكِ دون عناء التنقل.'
+                  : 'Loyalty Spa was established as an exclusive home wellness service fusing refined Saudi hospitality with master therapeutic techniques. We believe true luxury is enjoying complete restorative peace inside your home without the stress of urban travel.'}
               </p>
               <p className={styles.paragraph}>
                 {lang === 'ar'
-                  ? 'كل غرفة علاج في سبا الولاء هي مساحة خاصة صُممت بعناية لتمنحكِ العزلة التامة عن صخب الحياة اليومية، مع معالجات خبيرات يمتلكن أعلى درجات المهارة والاهتمام.'
-                  : 'Every treatment suite at Loyalty Spa is a private sanctuary meticulously engineered to isolate you from urban noise, guided by master therapists committed to your personal wellbeing.'}
+                  ? 'تصلكِ معالجاتنا الخبيرات بكامل التجهيزات والزيوت العضوية الفاخرة، لتتحول مساحتكِ الخاصة في المنزل إلى ملاذ هادئ يضمن لكِ أعلى درجات الخصوصية والاستجمام.'
+                  : 'Our certified master therapists arrive at your doorstep fully equipped with luxury portable beds, linens, and organic botanicals, transforming your private space into a personal sanctuary of unhurried calm.'}
               </p>
 
               {/* Stats Highlights */}

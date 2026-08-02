@@ -21,8 +21,8 @@ export default function TermsPage() {
           </p>
           <p style={{ marginBottom: '16px' }}>
             {lang === 'ar'
-              ? 'يُرجى الحضور قبل الموعد بـ 15 دقيقة للاستمتاع بأجواء الاستقبال والاستعداد للجلسة.'
-              : 'Guests are kindly requested to arrive 15 minutes prior to appointment time to enjoy our welcome ritual.'}
+              ? 'تصلكِ المعالجة المحترفة إلى منزلكِ قبل الموعد بـ ١٥ دقيقة لتجهيز مكان الجلسة وتوفير أجواء الاسترخاء الكاملة.'
+              : 'Our certified therapist will arrive at your home 15 minutes prior to session time to prepare the spa setup and ambient lighting.'}
           </p>
         </div>
       </Container>

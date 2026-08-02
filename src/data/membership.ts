@@ -97,16 +97,16 @@ export const membershipTiers: MembershipTier[] = [
     featuresEn: [
       '20% Discount on all spa & boutique offerings',
       'Dedicated Personal Spa Concierge',
-      'Free VIP Room upgrade on every booking',
+      'Complimentary Luxury Home Aromatherapy Upgrade',
       'Complimentary welcome gift box every quarter',
-      'Unlimited tea lounge access with private companion',
+      'Priority VIP Home Scheduling & Preferred Master Therapist Guarantee',
     ],
     featuresAr: [
       'خصم ٢٠٪ شامل لجميع خدمات السبا والمتجر',
       'مستشارة خاصة لإدارة حروجزاتكِ ومواعيدكِ',
-      'ترقية مجانية لغرفة VIP الملكية في كل زيارة',
+      'ترقية مجانية للزيوت العطرية الملكية للجلسات المنزلية',
       'صندوق هدايا فاخر مجاني كل ثلاثة أشهر',
-      'دخول مفتوح لصالة الضيافة الملكية برفقة صديقة',
+      'أولوية التنسيق المباشر وحجز المعالجة المفضلة دائماً',
     ],
   },
 ];

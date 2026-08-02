@@ -32,7 +32,7 @@ export const Footer: React.FC = () => {
           <div className={styles.newsletterInfo}>
             <div className={styles.newsBadge}>
               <Sparkles size={14} />
-              <span>{lang === 'ar' ? 'مجتمع الاستجمام' : 'Sanctuary Journal'}</span>
+              <span>{lang === 'ar' ? 'مجتمع Loyalty Spa' : 'Loyalty Spa Circle'}</span>
             </div>
             <h3 className={styles.newsletterTitle}>{t.newsletter.title}</h3>
             <p className={styles.newsletterSubtitle}>{t.newsletter.subtitle}</p>
@@ -84,7 +84,7 @@ export const Footer: React.FC = () => {
                 target="_blank"
                 rel="noreferrer"
                 className={styles.socialIcon}
-                aria-label="WhatsApp Sanctuary"
+                aria-label="WhatsApp Home Spa Concierge"
               >
                 <Phone size={18} />
               </a>

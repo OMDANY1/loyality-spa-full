@@ -23,9 +23,9 @@ export default function ContactPage() {
       <div className={styles.header}>
         <Container size="narrow">
           <SectionHeader
-            tag="Reach Sanctuary"
+            tag={lang === 'ar' ? 'خدمة العملاء' : 'Home Concierge'}
             title={t.nav.contact}
-            subtitle={lang === 'ar' ? 'نحن هنا للإجابة على جميع استفساراتكِ ومساعدتكِ في ترتيب موعدكِ الفاخر.' : 'Our concierge team is at your service for reservations, inquiries, and private bookings.'}
+            subtitle={lang === 'ar' ? 'نحن هنا للإجابة على استفساراتكِ وترتيب موعد جلستكِ المنزلية الفاخرة.' : 'Our concierge team is at your service for home spa reservations and inquiries.'}
             light
           />
         </Container>
@@ -36,14 +36,14 @@ export default function ContactPage() {
           {/* Contact Details */}
           <div className={styles.infoCol}>
             <h3 className={styles.infoTitle}>
-              {lang === 'ar' ? 'معلومات التواصل والحجز' : 'Sanctuary Concierge'}
+              {lang === 'ar' ? 'معلومات التنسيق والحجز المنزلي' : 'Home Spa Concierge'}
             </h3>
 
             <div className={styles.infoList}>
               <div className={styles.infoItem}>
                 <MapPin size={22} className={styles.icon} />
                 <div>
-                  <h4>{lang === 'ar' ? 'العنوان' : 'Location'}</h4>
+                  <h4>{lang === 'ar' ? 'نطاق الخدمة والتغطية' : 'Service Coverage Area'}</h4>
                   <p>{t.footer.address}</p>
                 </div>
               </div>
@@ -77,7 +77,7 @@ export default function ContactPage() {
               <MessageCircle size={28} className={styles.waIcon} />
               <div>
                 <h4>{lang === 'ar' ? 'حجز سريع عبر الواتساب' : 'Quick WhatsApp Booking'}</h4>
-                <p>{lang === 'ar' ? 'تواصل معنا مباشرة عبر الواتساب للحصول على رد فوري.' : 'Chat directly with our reception team.'}</p>
+                <p>{lang === 'ar' ? 'تواصل معنا مباشرة عبر الواتساب لتأكيد موعدكِ المنزلي.' : 'Chat directly with our home spa concierge team.'}</p>
               </div>
               <a
                 href="https://api.whatsapp.com/send?phone=966506622900"
@@ -95,7 +95,7 @@ export default function ContactPage() {
             {submitted ? (
               <div className={styles.successCard}>
                 <h3>{lang === 'ar' ? 'تم إرسال رسالتكِ بنجاح' : 'Message Sent Successfully'}</h3>
-                <p>{lang === 'ar' ? 'شكراً لتواصلكِ معنا. سيتواصل معكِ فريق الاستقبال قريباً.' : 'Thank you for reaching out. Our team will contact you shortly.'}</p>
+                <p>{lang === 'ar' ? 'شكراً لتواصلكِ معنا. سيتواصل معكِ فريق الحجز المنزلي قريباً.' : 'Thank you for reaching out. Our concierge team will contact you shortly.'}</p>
               </div>
             ) : (
               <form onSubmit={handleSubmit} className={styles.form}>

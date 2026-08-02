@@ -94,7 +94,7 @@ export const BookingModal: React.FC = () => {
     .join(', ');
 
   const whatsappMessage = encodeURIComponent(
-    `Hello Loyalty Spa! I would like to reserve a spa ritual:\n\n` +
+    `Hello Loyalty Spa! I would like to reserve a luxury home spa ritual:\n\n` +
       `- Treatment: ${serviceName} (${duration} mins)\n` +
       `- Add-ons: ${addonsNames || 'None'}\n` +
       `- Date & Time: ${date} at ${time}\n` +
@@ -163,8 +163,8 @@ export const BookingModal: React.FC = () => {
           <div className={styles.durationGrid}>
             {[
               { mins: 60, price: basePrice, labelEn: '60 Minutes (Standard Relaxation)', labelAr: '٦٠ دقيقة (استرخاء قياسي)' },
-              { mins: 90, price: basePrice + 100, labelEn: '90 Minutes (Deep Restoration)', labelAr: '٩٠ دقيقة (تجديد عميق - توصية الجرّاح)' },
-              { mins: 120, price: basePrice + 180, labelEn: '120 Minutes (Royal Complete Sanctuary)', labelAr: '١٢٠ دقيقة (طقوس الاستجمام الملكية)' },
+              { mins: 90, price: basePrice + 100, labelEn: '90 Minutes (Deep Restoration)', labelAr: '٩٠ دقيقة (تجديد عميق)' },
+              { mins: 120, price: basePrice + 180, labelEn: '120 Minutes (Royal Complete Home Ritual)', labelAr: '١٢٠ دقيقة (طقوس الاستجمام الملكية المنزلية)' },
             ].map((d) => (
               <div
                 key={d.mins}

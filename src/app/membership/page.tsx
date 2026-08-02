@@ -23,14 +23,14 @@ export default function MembershipPage() {
     {
       qEn: 'Do points or tier statuses expire?',
       qAr: 'هل تنتهي صلاحية النقاط أو مستوى العضوية؟',
-      aEn: 'Loyalty points remain valid for 12 full months from your last visit. Once you achieve Gold or Platinum status, you enjoy tier benefits for a full calendar year.',
-      aAr: 'تبقى النقاط صالحة لمدة ١٢ شهراً كاملاً من تاريخ آخر زيارة. وعند الوصول للمستوى الذهبي أو البلاتيني تستمتعين بالمزايا لمدة عام كامل.',
+      aEn: 'Loyalty points remain valid for 12 full months from your last home session. Once you achieve Gold or Platinum status, you enjoy tier benefits for a full calendar year.',
+      aAr: 'تبقى النقاط صالحة لمدة ١٢ شهراً كاملاً من تاريخ آخر جلسة منزلية. وعند الوصول للمستوى الذهبي أو البلاتيني تستمتعين بالمزايا لمدة عام كامل.',
     },
     {
       qEn: 'Can I gift my membership privileges to a friend?',
       qAr: 'هل يمكنني إهداء مزايا العضوية لصديقة؟',
-      aEn: 'Gold and Platinum members enjoy companion privileges, including shared lounge access and guest discount vouchers.',
-      aAr: 'نعم، تتمتع عضوات الفئة الذهبية والبلاتينية بمزايا إضافية تشمل مرافقات واستخدام قسائم الخصم للضيوف.',
+      aEn: 'Gold and Platinum members enjoy companion privileges, including shared home gift vouchers and guest discount codes.',
+      aAr: 'نعم، تتمتع عضوات الفئة الذهبية والبلاتينية بمزايا إضافية تشمل قسائم خصم وهدايا للضيوف.',
     },
   ];
 
