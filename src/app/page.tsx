@@ -6,7 +6,6 @@ import { ShopSpotlightSection } from '@/components/sections/ShopSpotlight/ShopSp
 import { MembershipTeaserSection } from '@/components/sections/MembershipTeaser/MembershipTeaser';
 import { PackagesSection } from '@/components/sections/PackagesGrid/PackagesGrid';
 import { TestimonialsSection } from '@/components/sections/Testimonials/Testimonials';
-import { BlogPreviewSection } from '@/components/sections/BlogPreview/BlogPreview';
 
 export default function HomePage() {
   return (
@@ -19,7 +18,6 @@ export default function HomePage() {
       <MembershipTeaserSection />
       <PackagesSection />
       <TestimonialsSection />
-      <BlogPreviewSection />
     </>
   );
 }

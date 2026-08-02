@@ -8,7 +8,6 @@ export interface Dictionary {
     addOns: string;
     offers: string;
     membership: string;
-    blog: string;
     contact: string;
     gift: string;
     bookNow: string;
@@ -80,12 +79,6 @@ export interface Dictionary {
     tag: string;
     title: string;
   };
-  blog: {
-    tag: string;
-    title: string;
-    readTime: string;
-    readArticle: string;
-  };
   newsletter: {
     title: string;
     subtitle: string;
@@ -146,7 +139,6 @@ export const dictionaries: Record<Language, Dictionary> = {
       addOns: 'Luxury Add-ons',
       offers: 'Packages & Offers',
       membership: 'Membership',
-      blog: 'Journal',
       contact: 'Contact',
       gift: 'Gift',
       bookNow: 'Book Experience',
@@ -218,12 +210,6 @@ export const dictionaries: Record<Language, Dictionary> = {
       tag: 'Guest Reflections',
       title: 'Words of Renewal',
     },
-    blog: {
-      tag: 'Wellness Journal',
-      title: 'Insights on Skincare & Self-Care',
-      readTime: 'min read',
-      readArticle: 'Read Journal Entry',
-    },
     newsletter: {
       title: 'Join Our Sanctuary Journal',
       subtitle: 'Receive private invitations, wellness insights, and seasonal beauty rituals.',
@@ -282,7 +268,6 @@ export const dictionaries: Record<Language, Dictionary> = {
       addOns: 'الإضافات الفاخرة',
       offers: 'الباقات والعروض',
       membership: 'برنامج الولاء',
-      blog: 'المدونة',
       contact: 'تواصل معنا',
       gift: 'الإهداء',
       bookNow: 'احجزي التجربة',
@@ -353,12 +338,6 @@ export const dictionaries: Record<Language, Dictionary> = {
     testimonials: {
       tag: 'آراء العميلات',
       title: 'قصص الاستجمام والراحة',
-    },
-    blog: {
-      tag: 'مدونة العافية',
-      title: 'مقالات ونصائح العناية والبشرة',
-      readTime: 'دقائق قراءة',
-      readArticle: 'اقرئي المقال',
     },
     newsletter: {
       title: 'اشتركي في النشرة الخاصة',

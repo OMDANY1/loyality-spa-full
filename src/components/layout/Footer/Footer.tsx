@@ -101,7 +101,7 @@ export const Footer: React.FC = () => {
               <li><Link href="/add-ons" className={styles.link}>{t.nav.addOns}</Link></li>
               <li><Link href="/offers" className={styles.link}>{t.nav.offers}</Link></li>
               <li><Link href="/membership" className={styles.link}>{t.nav.membership}</Link></li>
-              <li><Link href="/blog" className={styles.link}>{t.nav.blog}</Link></li>
+              <li><Link href="/gift" className={styles.link}>{t.nav.gift}</Link></li>
               <li><Link href="/contact" className={styles.link}>{t.nav.contact}</Link></li>
             </ul>
           </div>
